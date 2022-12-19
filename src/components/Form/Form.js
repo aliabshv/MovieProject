@@ -1,5 +1,6 @@
 // import getMovieData from "../../Services/db"
 import getMovieData from "../../Services/db"
+import respons from "../../Services/db"
 import {useState} from "react"
 import "./Form.css"
 
@@ -10,7 +11,9 @@ const[data,setData]=useState([])
         
         e.preventDefault( )
         let result =await getMovieData(e.target.formInput.value)
-        setData(result)
+       setData(result) 
+      console.log(respons);
+        
 
 
     }

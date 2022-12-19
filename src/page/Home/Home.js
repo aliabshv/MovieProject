@@ -1,3 +1,4 @@
+import Card from "../../components/Card/Card";
 import Form from "../../components/Form/Form";
 
 import Listen from "../../components/Listen/Listen";
@@ -9,7 +10,9 @@ function Home() {
                 <Form />
                 <Listen />
             </div>
-
+<Card name='Alma'/>
+<Card/>
+<Card/> 
         </>
 
     )
