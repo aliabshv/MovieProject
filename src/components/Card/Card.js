@@ -1,22 +1,39 @@
 
 import "./Card.css";
-function Card(props) {
+function Card({movieData}) {
+
+ function  sendFilm(){
+console.log('alma');
+}
+
+
 
   return (
-    
-    <div className="card">
+   <>  
+ {
+  movieData.map(item=>{
+    return(
+      <div className="card">
       <div className="photo">
         <img
           alt=" "
-          src="https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg"
+          src={item.Poster}
         ></img>
       </div>
       
       <div className="info">
-        <h1>{props.name}</h1>
-        <button>Elave et</button>
+        <h1>{item.Title}</h1>
+        <button className="cardButton" onSubmit={sendFilm}>Elave et</button>
       </div>
+      
     </div>
+    )
+  })
+ }
+   </>
+  
+
+    
   );
 }
 export default Card;

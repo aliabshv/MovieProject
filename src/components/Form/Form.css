@@ -1,31 +1,31 @@
 .from input{
     width: 260px;
-    height: 5px;
+    height: 10px;
     margin-top: 5px;
     padding: 10px;
    
 }
 .from{
     display: flex;
+    flex-direction: column;
     margin-top: 40px;
     margin-left: 310px;
-    width:300px;
+    width:370px;
 }
 lable{
     font-size: 13px;
  
 }
 
-.from button{
-        height: 28px;
-        width: 70px;
+.formButton{
+        height: 33px;
+        width: 180px;
         border: none;
         background-color: rgba(128, 128, 128, 0.888);
         color: #ffeedb;
         cursor: pointer;
         margin-top: 21px;
         margin-left: 10px;
-      
         outline: none;
     
 }

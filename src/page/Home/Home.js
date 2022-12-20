@@ -1,4 +1,3 @@
-import Card from "../../components/Card/Card";
 import Form from "../../components/Form/Form";
 
 import Listen from "../../components/Listen/Listen";
@@ -7,12 +6,14 @@ function Home() {
     return (
         <>
             <div className="home">
-                <Form />
-                <Listen />
+                <div><Form /></div>
+                <div><Listen /> </div>
+               
+               
+               
+                
             </div>
-<Card name='Alma'/>
-<Card/>
-<Card/> 
+
         </>
 
     )

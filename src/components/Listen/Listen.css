@@ -1,11 +1,12 @@
 .listen {
     width: 300px;
-    height: 178px;
-    border: 1px solid black;
+    height: auto;
+    border: 3px solid blue;
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 60px;
     margin-left: 250px;
+    background-color: rgb(27, 186, 221);
 }
 
 
@@ -14,11 +15,12 @@
     width: 90px;
     font-size: 17px;
     border: none;
-    background-color: rgba(128, 128, 128, 0.449);
+    background-color: rgba(46, 25, 163, 0.449);
     color: #ffeedb;
     padding: 7px;
     margin-left: 23px;
-    margin-top: 40px;
+    margin-top: 10px;
+    margin-bottom: 25px;
 }
 
 .listen input {
@@ -27,4 +29,12 @@
     height: 30px;
     margin-left: 23px;
     margin-top: 30px;
+}
+ul{
+    margin-top: 20px;
+    margin-left: 40px;
+ list-style-type: style;;
+}
+li{
+    margin-top: 5px;
 }

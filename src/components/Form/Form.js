@@ -1,47 +1,53 @@
 // import getMovieData from "../../Services/db"
 import getMovieData from "../../Services/db"
-import respons from "../../Services/db"
-import {useState} from "react"
+
+import { useState } from "react"
+import Card from "../Card/Card"
 import "./Form.css"
 
 
 function Form() {
-const[data,setData]=useState([])
-    const handleSubmit = async(e) => {
-        
-        e.preventDefault( )
-        let result =await getMovieData(e.target.formInput.value)
-       setData(result) 
-      console.log(respons);
-        
+  const [data, setData] = useState([])
 
-
+     const handleSubmit = async (e) => {
+      // functiondisableButton()
+    e.preventDefault()
+    if(e.target.formInput.value){
+ let result = await getMovieData(e.target.formInput.value)
+    setData(result)
     }
+   
+  
+  }
+ 
 
-    return (
 
-        <div className="from" >
-          <form onSubmit={handleSubmit} style={{display:"flex"}}>
-          <lable >Search movies by title:
-                <input name="formInput"placeholder="For example: Shawshank Redemption"></input>
+  return (
+
+    <div className="from" >
+      
+      <div>
+        <div >
+          <form onSubmit={handleSubmit} style={{ display: "flex" }}>
+            <lable >Search movies by title:
+              <input id="inptId" name="formInput" placeholder="For example: Shawshank Redemption" ></input>
 
             </lable>
-            <button type="submit">Search</button>
+            <button type="submit" className="formButton">Search</button>
           </form>
-          
-          <ul>
-            {
-            
-            data?.map(item=>{
-                return(
-                <li>{item.Title}</li>
-                )
-               
-            })
-            }
-          </ul>
         </div>
-    )
+        <div >
+          <Card movieData={data} />
+
+        </div>
+      </div>
+      
+
+
+
+    </div>
+
+  )
 }
 
 export default Form;
