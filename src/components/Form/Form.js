@@ -6,7 +6,7 @@ import Card from "../Card/Card"
 import "./Form.css"
 
 
-function Form() {
+const Form=({setList,list})=> {
   const [data, setData] = useState([])
 
      const handleSubmit = async (e) => {
@@ -37,7 +37,7 @@ function Form() {
           </form>
         </div>
         <div >
-          <Card movieData={data} />
+          <Card movieData={data} setList={setList} list={list} />
 
         </div>
       </div>

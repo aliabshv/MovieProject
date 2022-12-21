@@ -28,3 +28,11 @@
     background-color: #124af3;
     margin-top: 10px;
 }
+.cardButton:hover{
+    background-color: rgb(3, 255, 234);
+    color: black;
+    transform: scale(1.1);
+}
+.cardImg:hover{
+    transform: scale(1.5);  
+}

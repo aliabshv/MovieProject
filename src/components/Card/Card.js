@@ -1,9 +1,17 @@
 
 import "./Card.css";
-function Card({movieData}) {
+function Card({movieData,setList,list}) {
 
- function  sendFilm(){
-console.log('alma');
+const sendFilm=(title)=>{
+  let result=list.includes(title)
+if(!result){
+ setList([...list,title])
+}
+    
+ 
+
+  
+
 }
 
 
@@ -17,13 +25,13 @@ console.log('alma');
       <div className="photo">
         <img
           alt=" "
-          src={item.Poster}
+          src={item.Poster} className="cardImg"
         ></img>
       </div>
       
       <div className="info">
         <h1>{item.Title}</h1>
-        <button className="cardButton" onSubmit={sendFilm}>Elave et</button>
+        <button className="cardButton" onClick={()=>{sendFilm(item.Title)}}>Elave et</button>
       </div>
       
     </div>
@@ -37,3 +45,4 @@ console.log('alma');
   );
 }
 export default Card;
+
